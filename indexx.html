@@ -1,0 +1,229 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Maryna & Douglas - 04/10/2025</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap');
+
+        body {
+            margin: 0;
+            font-family: 'Open Sans', sans-serif;
+            background: url('https://www.toptal.com/designers/subtlepatterns/uploads/leaf.png');
+            background-size: cover;
+            background-attachment: fixed;
+            color: #333;
+        }
+
+        header {
+            background-color: rgba(79, 93, 61, 0.85);
+            color: #fff;
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            margin: 0;
+        }
+
+        header p {
+            margin: 0.5rem 0 0;
+            font-size: 1.2rem;
+        }
+
+        section {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            background-color: rgba(255, 255, 255, 0.85);
+            border-radius: 10px;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            color: #4f5d3d;
+            font-size: 1.8rem;
+            margin-top: 0;
+        }
+
+        .formulario, .mensagem {
+            background-color: #f0f0eb;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+
+        label {
+            display: block;
+            margin-top: 1rem;
+            font-weight: bold;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 0.5rem;
+            margin-top: 0.2rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            margin-top: 1rem;
+            padding: 0.7rem 1.5rem;
+            background-color: #4f5d3d;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem 1rem;
+            background-color: #eaeade;
+            color: #4f5d3d;
+            font-size: 0.9rem;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 1rem;
+        }
+
+        .gallery img {
+            width: 100%;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        audio {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <audio id="bgMusic" loop>
+        <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        const audio = document.getElementById('bgMusic');
+        let started = false;
+
+        function tryPlayAudio() {
+            if (!started) {
+                audio.volume = 0.3;
+                audio.play().catch(() => {}); // silent fail
+                started = true;
+            }
+        }
+
+        window.addEventListener('click', tryPlayAudio);
+        window.addEventListener('scroll', tryPlayAudio);
+    </script>
+
+    <header>
+        <h1>Maryna & Douglas</h1>
+        <p>04 de outubro de 2025 — Cais do Oriente, RJ</p>
+        <p>Contamos os dias para celebrar esse amor com você!</p>
+    </header>
+
+    <section>
+        <h2>Nossa História</h2>
+        <p>Desde 2022, embarcamos juntos nessa linda jornada de amor. O pedido de noivado foi feito na Torre Eiffel — um sonho que se tornou realidade. Agora estamos prontos para dizer "sim" cercados por quem amamos!</p>
+    </section>
+
+    <section>
+        <h2>Informações do Evento</h2>
+        <p><strong>Data:</strong> 04/10/2025</p>
+        <p><strong>Local:</strong> Cais do Oriente – Centro – Rio de Janeiro</p>
+        <p><strong>Endereço:</strong> Rua Visconde de Itaboraí, nº 8</p>
+    </section>
+
+    <section class="formulario">
+        <h2>Confirme sua Presença</h2>
+        <form action="mailto:maaaaaaryna@gmail.com" method="POST" enctype="text/plain">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="Nome" required>
+
+            <label for="convidados">Número de convidados:</label>
+            <input type="number" id="convidados" name="Convidados" required>
+
+            <button type="submit">Confirmar</button>
+        </form>
+    </section>
+
+    <section class="mensagem">
+        <h2>Deixe sua Mensagem</h2>
+        <form action="mailto:maaaaaaryna@gmail.com" method="POST" enctype="text/plain">
+            <label for="nomeMsg">Nome:</label>
+            <input type="text" id="nomeMsg" name="Nome" required>
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="Mensagem" rows="4" required></textarea>
+
+            <button type="submit">Enviar Mensagem</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>Nossa Galeria</h2>
+        <div class="gallery">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e6/Paris_Tour_Eiffel_Wikimedia_Commons.jpg" alt="Torre Eiffel">
+            <img src="https://images.unsplash.com/photo-1521405924368-64c5b84beca4?auto=format&fit=crop&w=800&q=60" alt="Viagem 1">
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=60" alt="Viagem 2">
+        </div>
+    </section>
+
+    <section><h2>Lista de Presentes (Engraçada & Lúdica)</h2><p>
+### 🎁 Lista de Presentes (Engraçada & Lúdica)
+
+- 🍕 1 Pizza para noites preguiçosas — R$ 80  
+- 🧳 Viagem dos sonhos (aceitamos milhas!) — R$ 800  
+- 🎬 Maratona Netflix sem interrupções — R$ 100  
+- 🍫 Caixa de chocolates premium — R$ 120  
+- 💆 Sessão de massagem pós-festa — R$ 250  
+- 🧼 Kit de banho e espuma pro relax — R$ 180  
+- 🍷 Garrafa de vinho para brindar momentos — R$ 150  
+- ☕ Café da manhã na cama (com direito a mimo) — R$ 130  
+- 🎲 Noite de jogos de tabuleiro a dois — R$ 140  
+- 🧺 Piquenique no parque com frutas e flores — R$ 160  
+- 🎧 Assinatura de música para dançar na sala — R$ 90  
+- 📸 Revelação de fotos do casamento — R$ 150  
+- 💡 Luzinhas românticas pro nosso cantinho — R$ 85  
+- 🛏️ Jogo de lençóis para dormir de conchinha — R$ 300  
+- 🍿 Pipoca gourmet para sessões de cinema em casa — R$ 70  
+- 🕯️ Velas aromáticas para noites relax — R$ 100  
+- 🐾 Kit de mimo pro nosso futuro pet — R$ 190  
+- 🎈 Balões e decoração pro nosso mini after — R$ 120  
+- 🧁 Docinhos extras para a festa (a gente merece!) — R$ 150  
+- 🚖 Corrida de volta da lua de mel (rs) — R$ 200  
+- 🥂 Taças personalizadas de brindes eternos — R$ 180  
+- 🖼️ Moldura linda para nossa foto preferida — R$ 130  
+- 👣 Sessão de reflexologia (pros pés pós-festa!) — R$ 220  
+- 🏠 Tijolinho simbólico pro nosso futuro lar — R$ 500  
+- 🧸 Mini escapada de fim de semana — R$ 650  
+- 🧖‍♀️ Spa day completo para dois — R$ 450  
+- 🍜 Jantar chique com direito a sobremesa — R$ 300  
+- 🛫 Upgrade de assento na lua de mel — R$ 750  
+- 🧹 Serviço de limpeza pós-casamento (socorro!) — R$ 220  
+- 📚 Livros para nossa biblioteca romântica — R$ 110  
+- 🔌 Extensão mágica para carregar todos os devices — R$ 45  
+- 🧃 Estoque de sucos naturais (vida saudável, né?) — R$ 95  
+- 🧯 Kit emergência “briga por série” — R$ 85  
+- 🔑 Cofrinho para a próxima aventura — R$ 180  
+</p></section>
+
+    <footer>
+        Com amor, Maryna & Douglas ♥  
+        <br> Criado com carinho para o nosso grande dia.
+    </footer>
+
+</body>
+</html>
